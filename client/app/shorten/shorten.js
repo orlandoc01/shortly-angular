@@ -18,7 +18,7 @@ angular.module('shortly.shorten', [])
     var check = isValidUrl($scope.link.url);
     if (check) {
       Links.addOne($scope.link)
-      .then(function(res) {
+      .then(function (res) {
         $scope.messageTxt = res.data.url;
       });
     } else {
