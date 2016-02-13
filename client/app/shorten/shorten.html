@@ -9,12 +9,12 @@
 
 
   <form>
-      <input class='text' type='text' name='url'>
-      <input type='submit' value='Shorten'>
+      <input class='text' type='text' ng-model='link.url'>
+      <input type='submit' value='Shorten' ng-click='addLink()'>
   </form>
   <img class='spinner' src='/spiffygif_46x46.gif'>
-  <div class='message'></div>
-  
+  <div class='message'>{{messageTxt}}</div>
+
 </div>
 
 

@@ -12,11 +12,17 @@ angular.module('shortly.shorten', [])
     url: ""
   };
 
+  $scope.messageTxt = "";
+
   $scope.addLink = function () {
-    console.log('$scope.link', $scope.link);
     var check = isValidUrl($scope.link.url);
     if (check) {
-      Links.addOne($scope.link);
+      Links.addOne($scope.link)
+      .then(function(res) {
+        $scope.messageTxt = res.data.url;
+      });
+    } else {
+      $scope.messageTxt = "Invalid URL";
     }
   };
 
