@@ -158,3 +158,20 @@ input[type=url]:focus {
   text-align: center;
 }
 
+.linkContainer {
+  display: block;
+  margin: 10px;
+}
+
+.linkContainer > img {
+  display: inline-block;
+}
+.linkContainer > .info {
+  display: inline-block;
+}
+
+.search {
+  margin: 10px;
+}
+
+

@@ -15,6 +15,16 @@
   <img class='spinner' src='/spiffygif_46x46.gif'>
   <div class='message'>{{messageTxt}}</div>
 
+  <div class='linkContainer' ng-model = ''>
+    <img src='../assets/redirect_icon.png'/>
+    <div class='info'>
+      <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
+      <div class='title'>{{link.title}}</div>
+      <div class='original'>{{link.url}}</div>
+      <a href='{{link.baseUrl}}/{{link.code}}'>{{link.baseUrl}}/{{link.code}}</a>
+    </div>
+  </div>
+
 </div>
 
 
