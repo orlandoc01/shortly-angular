@@ -3,7 +3,8 @@ angular.module('shortly', [
   'shortly.links',
   'shortly.shorten',
   'shortly.auth',
-  'ngRoute'
+  'ngRoute',
+  'shortly.shortenedLink'
 ])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider

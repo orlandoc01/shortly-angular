@@ -11,6 +11,6 @@
         <input class='text' type='text' ng-model='searchText'>
     </div>
 
-    <shortened-link ng-repeat='link in data.links | filter:searchText'></shortened-link>
+    <shortened-link ng-repeat='link in data.links | filter:searchText' link='link'></shortened-link>
 
 </div>

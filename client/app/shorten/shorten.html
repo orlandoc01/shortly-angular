@@ -14,15 +14,7 @@
   </form>
   <div class='message'>{{messageTxt}}</div>
 
-  <div class='linkContainer' ng-style="shorten">
-    <img src='../assets/redirect_icon.png'/>
-    <div class='info'>
-      <div class='visits'><span class='count'>{{shortenLink.visits}}</span>Visits</div>
-      <div class='title'>{{shortenLink.title}}</div>
-      <div class='original'>{{shortenLink.url}}</div>
-      <a href='{{shortenLink.baseUrl}}/{{shortenLink.code}}'>{{shortenLink.baseUrl}}/{{shortenLink.code}}</a>
-    </div>
-  </div>
+  <shortened-link ng-style="shorten" link='shortenLink'></shortened-link>
 
 </div>
 
