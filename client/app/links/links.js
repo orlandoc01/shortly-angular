@@ -9,6 +9,7 @@ angular.module('shortly.links', [])
       return link2.visits - link1.visits;
     });
     $scope.data.links = links;
+    window.links = links;
   });
 
   $scope.signout = Auth.signout;
