@@ -15,10 +15,19 @@ angular.module('shortly', [
       templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'
     })
-    // Your code here
     .when('/links', {
       templateUrl: 'app/links/links.html',
-      controller: 'LinksController'
+      controller: 'LinksController',
+      resolve: {
+        'getAll': function (Links) {
+          return Links.getAll().then(function (links) {
+            links.sort(function (link1, link2) {
+              return link2.visits - link1.visits;
+            });
+            return links;
+          });
+        }
+      }
     })
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',

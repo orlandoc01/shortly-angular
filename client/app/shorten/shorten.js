@@ -30,7 +30,7 @@ angular.module('shortly.shorten', [])
 
     } else {
       $scope.shortenLink = {};
-      $scope.shorten.display ='none';
+      $scope.shorten.display = 'none';
       $scope.messageTxt = "Invalid URL";
     }
   };
