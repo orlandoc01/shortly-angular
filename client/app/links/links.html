@@ -8,9 +8,12 @@
       <a href='#/signin' class='logout' ng-click='signout()'>Logout</a>
     </div>
 
+    <div class='search'>
+        <input class='text' type='text' ng-model='searchText'>
+    </div>
 
 
-    <div id='linkContainer' ng-repeat='link in data.links'>
+    <div id='linkContainer' ng-repeat='link in data.links | filter:searchText'>
       <img src='/redirect_icon.png'/>
         <div class='info'>
           <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
