@@ -20,7 +20,10 @@ angular.module('shortly', [
       templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'
     })
-    .state('links', {
+    .state('mainPage', {
+      templateUrl: 'app/mainPage/main.html'
+    })
+    .state('mainPage.links', {
       url: '/links',
       templateUrl: 'app/mainPage/links/links.html',
       controller: 'LinksController',
@@ -35,7 +38,7 @@ angular.module('shortly', [
         }
       }
     })
-    .state('shorten', {
+    .state('mainPage.shorten', {
       url: '/shorten',
       templateUrl: 'app/mainPage/shorten/shorten.html',
       controller: 'ShortenController'
