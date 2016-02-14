@@ -22,7 +22,7 @@ angular.module('shortly', [
     })
     .state('links', {
       url: '/links',
-      templateUrl: 'app/links/links.html',
+      templateUrl: 'app/mainPage/links/links.html',
       controller: 'LinksController',
       resolve: {
         'getAll': function (Links) {
@@ -37,7 +37,7 @@ angular.module('shortly', [
     })
     .state('shorten', {
       url: '/shorten',
-      templateUrl: 'app/shorten/shorten.html',
+      templateUrl: 'app/mainPage/shorten/shorten.html',
       controller: 'ShortenController'
     });
 
